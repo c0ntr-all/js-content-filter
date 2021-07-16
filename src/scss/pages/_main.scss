@@ -1,0 +1,141 @@
+.mainPage{
+  display: grid;
+  gap: 0px 0px;
+  grid-template-areas: "leftSitebar mainContent";
+  grid-template-columns: 482px auto;
+
+  @media (max-width: 1280px) {
+    grid-template-columns: 300px auto;
+  }
+  @media (max-width: 1000px) {
+    grid-template-areas: "leftSitebar" "mainContent";
+    grid-template-columns: auto;
+  }
+  .mainContent {
+    &__topbar {
+      padding: 48px 40px;
+      border-bottom: 1px solid rgba(0,0,0, .1);
+    }
+    .pagination {
+      .page-item.last {
+        margin-left: auto;
+      }
+    }
+    &__title {
+      margin-bottom: 24px;
+      font-family: Montserrat, Arial;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 100%;
+      letter-spacing: -0.02em;
+      color: #1F2000;
+    }
+    &__items {
+      &-year {
+        padding: 9px 40px;
+        background: #EFECE7;
+        border: 1px solid #EFECE7;
+
+        span {
+          font-family: TT Norms, Montserrat, Arial;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 100%;
+          letter-spacing: -0.01em;
+          color: #2F2F2F;
+          opacity: 0.4;
+        }
+      }
+    }
+    &__item {
+      display: flex;
+      column-gap: 40px;
+      padding: 24px 40px;
+      border-bottom: 1px solid rgba(0,0,0, .1);
+
+      &:hover {
+        background: #EFECE7;
+      }
+
+      &.hidden {
+        display: none;
+      }
+
+      &-image {
+        svg {
+          width: 104px;
+          height: 104px;
+        }
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      &-title {
+        font-family: Montserrat, Arial;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: -0.01em;
+        color: #2F2F2F;
+      }
+      &-intro,
+      &-size,
+      &-btn a {
+        font-family: TT Norms, Montserrat, Arial;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+      }
+      &-intro {
+        margin-bottom: 16px;
+      }
+      &-download {
+        display: flex;
+        column-gap: 11px;
+        align-items: center;
+      }
+      &-btn a {
+        color: #2F2F2F;
+        text-decoration: none;
+        background: #F2F2F2;
+        border-radius: 6px;
+        padding: 3px 12px;
+
+        &:hover {
+          background: #BB9B6D;
+          color: #ffffff;
+        }
+      }
+      &-separator {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: #2F2F2F;
+        opacity: 0.2;
+      }
+      &-size {
+        color: #2F2F2F;
+        opacity: .4;
+      }
+
+      &-icon {
+        align-self: center;
+        margin-left: auto;
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}
