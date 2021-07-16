@@ -11,79 +11,77 @@
     grid-template-areas: "leftSitebar" "mainContent";
     grid-template-columns: auto;
   }
-  .mainContent {
-    &__topbar {
-      padding: 48px 40px;
-      border-bottom: 1px solid rgba(0,0,0, .1);
-    }
-    &__title {
-      margin-bottom: 24px;
-      font-family: Montserrat, Arial;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 30px;
-      line-height: 100%;
-      letter-spacing: -0.02em;
-      color: #1F2000;
-    }
-    &__items {
-      &-year {
-        padding: 9px 40px;
-        background: #EFECE7;
-        border: 1px solid #EFECE7;
+  &__topbar {
+    padding: 48px 40px;
+    border-bottom: 1px solid rgba(0,0,0, .1);
+  }
+  &__title {
+    margin-bottom: 24px;
+    font-family: Montserrat, Arial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: #1F2000;
+  }
+  &__items {
+    &-year {
+      padding: 9px 40px;
+      background: #EFECE7;
+      border: 1px solid #EFECE7;
 
-        span {
-          font-family: TT Norms, Montserrat, Arial;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 100%;
-          letter-spacing: -0.01em;
-          color: #2F2F2F;
-          opacity: 0.4;
-        }
-      }
-    }
-    &__item {
-      display: flex;
-      column-gap: 40px;
-      padding: 24px 40px;
-      border-bottom: 1px solid rgba(0,0,0, .1);
-
-      &:hover {
-        background: #EFECE7;
-      }
-
-      &.hidden {
-        display: none;
-      }
-
-      &-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-      }
-      &-title {
-        font-family: Montserrat, Arial;
+      span {
+        font-family: TT Norms, Montserrat, Arial;
         font-style: normal;
-        font-weight: 600;
-        font-size: 18px;
+        font-weight: 400;
+        font-size: 14px;
         line-height: 100%;
         letter-spacing: -0.01em;
         color: #2F2F2F;
+        opacity: 0.4;
       }
-      &-intro {
-        font-family: TT Norms, Montserrat, Arial;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 140%;
-        letter-spacing: -0.01em;
-      }
-      &-intro {
-        margin-bottom: 16px;
-      }
+    }
+  }
+  &__item {
+    display: flex;
+    column-gap: 40px;
+    padding: 24px 40px;
+    border-bottom: 1px solid rgba(0,0,0, .1);
+
+    &:hover {
+      background: #EFECE7;
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    &-title {
+      font-family: Montserrat, Arial;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 100%;
+      letter-spacing: -0.01em;
+      color: #2F2F2F;
+    }
+    &-intro {
+      font-family: TT Norms, Montserrat, Arial;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+    }
+    &-intro {
+      margin-bottom: 16px;
     }
   }
 }
