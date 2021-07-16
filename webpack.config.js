@@ -3,7 +3,6 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ImageminPlugin = require('imagemin-webpack-plugin').default
-// const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const AssetsManifest = require('webpack-assets-manifest')
 
@@ -48,15 +47,6 @@ if(!isDevMode) {
 			}
 		})
 	)
-	// конвертация изображений в формат WebP, с сохранением при этом исходных файлов
-	// plugins.push(
-	// 	new ImageminWebpWebpackPlugin({
-	// 		config: [{
-	// 			test: /\.(jpe?g|png)/,
-	// 			options: { quality:  80 }
-	// 		}],
-	// 	})
-	// )
 }
 
 module.exports = {
