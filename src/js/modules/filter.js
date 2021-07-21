@@ -66,7 +66,7 @@ export default class Filter {
         let element = document.createElement("div");
         let span = document.createElement("span");
         span.innerText = year;
-        element.classList.add("disclosureContent__items-year");
+        element.classList.add("filter__items-year");
         element.classList.add("js-year-line");
         element.appendChild(span);
 
