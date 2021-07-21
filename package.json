@@ -1,11 +1,11 @@
 {
   "name": "js-content-filter",
   "version": "1.0.0",
-  "description": "Установлен движок MODX Revolution 2.8.1-pl (October 22, 2020) - расширенная конфигурация .\r в целях\r премещена папка core за пределы корня сайта\r переименованы папки manager/ или connectors/ \r изменен ключ конфигурации\r см. https://docs.modx.com/current/ru/getting-started/installation/advanced\r ##Админка\r Включена русификация в админке.",
+  "description": "Фильтр контента по data-аттрибутам на js",
   "main": "index.js",
   "scripts": {
-    "dev": "../js-content-filter.loc/node_modules/.bin/cross-env NODE_ENV=development webpack --mode development --config webpack.config.js --watch",
-    "build": "../js-content-filter.loc/node_modules/.bin/cross-env NODE_ENV=production webpack --mode production --config webpack.config.js"
+    "dev": "cross-env NODE_ENV=development webpack --mode development --config webpack.config.js --watch",
+    "build": "cross-env NODE_ENV=production webpack --mode production --config webpack.config.js"
   },
   "author": "Sergey Taturin",
   "license": "ISC",

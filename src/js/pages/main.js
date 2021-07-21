@@ -1,6 +1,6 @@
 import "@src/scss/main.scss"
 
-import Filter from "/js/modules/filters";
+import Filter from "/js/modules/filter";
 
 window.addEventListener("DOMContentLoaded", () => {
     let filterControls = document.querySelector(".js-filter-controls");
