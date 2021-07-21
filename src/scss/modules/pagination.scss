@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  column-gap: 10px;
+  padding-left: 0;
+  list-style: none;
+
+  .page-item {
+    border: 1px solid #F2F2F2;
+    border-radius: 19px;
+
+    &.active {
+      background: #E4BC96;
+      border-color: #E4BC96;
+
+      .page-link {
+        color: #fff;
+      }
+    }
+  }
+  .page-link {
+    display: block;
+    padding: 7px 15px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    color: #222222;
+    text-decoration: none;
+  }
+}
