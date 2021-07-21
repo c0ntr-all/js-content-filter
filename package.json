@@ -1,5 +1,5 @@
 {
-  "name": "web-progect-modx",
+  "name": "js-content-filter",
   "version": "1.0.0",
   "description": "Установлен движок MODX Revolution 2.8.1-pl (October 22, 2020) - расширенная конфигурация .\r в целях\r премещена папка core за пределы корня сайта\r переименованы папки manager/ или connectors/ \r изменен ключ конфигурации\r см. https://docs.modx.com/current/ru/getting-started/installation/advanced\r ##Админка\r Включена русификация в админке.",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "dev": "../js-content-filter.loc/node_modules/.bin/cross-env NODE_ENV=development webpack --mode development --config webpack.config.js --watch",
     "build": "../js-content-filter.loc/node_modules/.bin/cross-env NODE_ENV=production webpack --mode production --config webpack.config.js"
   },
-  "author": "",
+  "author": "Sergey Taturin",
   "license": "ISC",
   "browserslist": [
     "> 1%",
@@ -43,10 +43,17 @@
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {
-    "micromodal": "^0.4.6",
-    "tabs": "^0.2.0",
-    "tiny-slider": "^2.9.3",
-    "toolslide.js": "^1.1.3"
-  }
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unrealserg/js-content-filter.git"
+  },
+  "keywords": [
+    "js",
+    "filter"
+  ],
+  "bugs": {
+    "url": "https://github.com/unrealserg/js-content-filter/issues"
+  },
+  "homepage": "https://github.com/unrealserg/js-content-filter#readme"
 }

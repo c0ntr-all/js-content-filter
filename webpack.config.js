@@ -10,26 +10,20 @@ const isDevMode = process.env.NODE_ENV === 'development'
 const filename = ext => isDevMode ? '[name].' + ext : '[name].[contenthash:8].' + ext
 
 let plugins = [
-	// svg спрайты
 	new SpriteLoaderPlugin({
 		plainSprite: true
 	}),
-	// Этот плагин веб-пакета сгенерирует файл JSON, который соответствует исходному имени файла с хешированной версией.
 	new AssetsManifest({
 		output: 'manifest.json',
 		publicPath: true,
 	}),
-	// для отчищение в dist, данных перед пересборкой проекта
 	new CleanWebpackPlugin(),
-	// минификация и экстрадирование css в отдельную директорию
 	new MiniCssExtractPlugin({
 		filename: 'css/' + filename('css')
 	})
 ]
 
 if(!isDevMode) {
-  	// сборка для прода
-	// копировать все что необходимо
 	plugins.push(
 		new CopyWebpackPlugin({
 			patterns: [
@@ -37,7 +31,6 @@ if(!isDevMode) {
 			],
 		})
 	)
-	// оптимизация изобаржений
 	plugins.push(
 		new ImageminPlugin({
 			test: /\.(jpe?g|png|gif)$/i,
@@ -50,24 +43,15 @@ if(!isDevMode) {
 }
 
 module.exports = {
-	mode: process.env.NODE_ENV, // режим сборки
-	// настройка путей
-	context: path.join(__dirname, './public/assets/src'),
-	resolve: { alias: { '@src': path.join(__dirname, './public/assets/src') } },
-	// входные файлы
+	mode: process.env.NODE_ENV,
+	context: path.join(__dirname, './src'),
+	resolve: { alias: { '@src': path.join(__dirname, './src') } },
 	entry: {
-		main: '/js/pages/main',
-		maintenance: '/js/pages/maintenance',
-		newsCatalog: '/js/pages/newsCatalog',
-		contact: '/js/pages/contact',
-		disclosure: '/js/pages/disclosure',
-		'404': '/js/pages/404',
-		'500': '/js/pages/500',
+		main: '/js/pages/main'
 	},
-	// результат сборки
 	output: {
 		filename: 'js/' + filename('js'),
-		path: path.join(__dirname, './public/assets/dist'),
+		path: path.join(__dirname, './dist'),
 		publicPath: '/'
 	},
 	devtool: false,
@@ -93,7 +77,7 @@ module.exports = {
 						options: {
 							name: filename('[ext]'),
 							outputPath: 'fonts/',
-							publicPath: '/assets/src/fonts/'
+							publicPath: '/src/fonts/'
 						}
 					}
 				],
@@ -119,8 +103,7 @@ module.exports = {
 					{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
-							publicPath: '/public/assets/dist/css/',
-							// sourceMap: true
+							publicPath: '/dist/css/',
 						},
 					},
 					'css-loader?url=false',
