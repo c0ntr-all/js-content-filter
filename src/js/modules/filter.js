@@ -66,8 +66,8 @@ export default class Filter {
         let element = document.createElement("div");
         let span = document.createElement("span");
         span.innerText = year;
-        element.classList.add("filter__items-year");
-        element.classList.add("js-year-line");
+        element.classList.add("filter__items-grouping");
+        element.classList.add("js-grouping-line");
         element.appendChild(span);
 
         return element;
@@ -81,16 +81,16 @@ export default class Filter {
             sortArray.push(parent.removeChild(item));
         });
         sortArray.sort((nodeA, nodeB) => {
-            let yearA = parseInt(nodeA.getAttribute("data-filter-year"));
-            let yearB = parseInt(nodeB.getAttribute("data-filter-year"));
+            let yearA = parseInt(nodeA.getAttribute("data-filter-grouping"));
+            let yearB = parseInt(nodeB.getAttribute("data-filter-grouping"));
 
             return yearB - yearA;
         }).forEach((element, index) => {
-            let currentElementYear = element.getAttribute("data-filter-year");
+            let currentElementYear = element.getAttribute("data-filter-grouping");
             let isHidden = element.classList.contains("hidden");
             if(index != 0) {
                 let previousElement = sortArray[index - 1];
-                let previousElementYear = previousElement.getAttribute("data-filter-year");
+                let previousElementYear = previousElement.getAttribute("data-filter-grouping");
                 if(currentElementYear != previousElementYear && !isHidden) {
                     parent.appendChild(this.createYearLine(currentElementYear));
                 }
@@ -104,7 +104,7 @@ export default class Filter {
 
     /*Функция удаления элемента-ограничителя при переключении фильтра*/
     ungroupItems() {
-        document.querySelectorAll(".js-year-line").forEach((e) => {
+        document.querySelectorAll(".js-grouping-line").forEach((e) => {
             e.remove()
         });
     }
