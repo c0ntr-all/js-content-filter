@@ -1,0 +1,7 @@
+#ignore
+.idea
+node_modules
+
+dist/js
+dist/css
+dist/img
